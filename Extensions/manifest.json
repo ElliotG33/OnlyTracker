@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "OF Priority Tracker",
+    "version": "0.1.0",
+  
+    "permissions": ["storage"],
+  
+    "host_permissions": [
+      "https://onlyfans.com/*"
+    ],
+  
+    "background": {
+      "service_worker": "background.js"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["https://onlyfans.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+  
+    "action": {
+      "default_popup": "Popup/dist/index.html"
+    }
+  }
